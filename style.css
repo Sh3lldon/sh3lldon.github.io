@@ -1,0 +1,82 @@
+/* .greetings{
+    color: #00FF09;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+html{
+    height: 100%;
+    width: 100%;
+    background-color: #330019;
+}
+body{
+    height: 99%;
+    width: 99%;
+}
+a, u {
+    text-decoration: none;
+  }
+.aboutme{
+    color: red;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 3.1%;
+    font-size: 220%;
+    float: left;
+    margin-left: 6%;
+    width: 25%;   
+
+}
+.posts{
+    color: red;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 2%;
+    font-size: 150%;
+    float: right;
+    margin-right: 18%;
+    width: 45%;
+}
+.whoiam{
+    margin-left: 2%;
+    width: 50%;
+}
+.divider{
+   margin-top: 5%;
+}
+
+.someinfo{
+    font-size: 140%;
+    margin-left: 2%;
+    color: #E0E0E0;
+    width: 40%;
+    justify-content: left;
+}
+.KZ{
+    color: #00FF00;
+}
+.github{
+    color: #00FF00;
+}
+.linkedin{
+    color: #00FF00;
+}
+.twitter{
+    color: #00FF00;
+}
+
+.message{
+    margin-top: 19%;
+    color: #e0e0e0e0;
+    justify-content: start;
+    float: right;
+    text-align: center;
+    width: 55%;
+    font-size: 300%;
+}
