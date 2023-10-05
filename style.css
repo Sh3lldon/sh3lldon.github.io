@@ -47,6 +47,9 @@ a, u {
     font-size: 150%;
     margin-left: 6%;
 }
+.post_message span{
+    color: yellow;
+}
 .aboutme{
     color:#0076fc;
     margin-left: 3%;
