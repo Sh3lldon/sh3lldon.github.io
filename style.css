@@ -1,72 +1,53 @@
 html{
     height: 100%;
     width: 100%;
-    background-color: #330019;
-}
-body{
-    height: 99%;
-    width: 99%;
+    background-color: #191615;
 }
 a, u {
-    text-decoration: none;
+    color: red;;
   }
-.aboutme{
-    color: red;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin-top: 3.1%;
-    font-size: 220%;
-    float: left;
-    margin-left: 6%;
-    width: 25%;   
-
+.info{
+    width: 80%;
+    height: 80%;
+    position: flex;
+    float:left;
+    margin-left: 15%;
+    margin-top: 5%;
 }
-.posts{
+.general_info span{
+    color: white;
+}
+.shelldon{
     color: red;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    margin-top: 2%;
+    font-size: 240%;
+}
+.whoami{
+    color: #0076fc;
     font-size: 150%;
-    float: right;
-    margin-right: 18%;
-    width: 45%;
+    margin-left: 3%;
 }
-.whoiam{
-    margin-left: 2%;
-    width: 50%;
-}
-.divider{
-   margin-top: 5%;
+.general_info{
+    color: #00fa07;
+    font-size: 150%;
+    margin-left: 6%;
 }
 
-.someinfo{
-    font-size: 140%;
-    margin-left: 2%;
-    color: #E0E0E0;
-    width: 40%;
-    justify-content: left;
+.posts{
+    color:#0076fc;
+    font-size: 150%;
+    margin-left: 3%;
 }
-.KZ{
-    color: #00FF00;
+.post_message{
+    color: white;
+    font-size: 150%;
+    margin-left: 6%;
 }
-.github{
-    color: #00FF00;
+.aboutme{
+    color:#0076fc;
+    margin-left: 3%;
+    font-size: 150%;
 }
-.linkedin{
-    color: #00FF00;
-}
-.twitter{
-    color: #00FF00;
-}
-
-.message{
-    margin-top: 19%;
-    color: #e0e0e0e0;
-    justify-content: start;
-    float: right;
-    text-align: center;
-    width: 55%;
-    font-size: 300%;
+.aboutmelink{
+    margin-left: 6%;
+    font-size: 150%;
 }
