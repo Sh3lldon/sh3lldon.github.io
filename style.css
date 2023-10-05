@@ -3,6 +3,10 @@ html{
     width: 100%;
     background-color: #191615;
 }
+body{
+    margin: 0;
+    height: 100%;
+}
 a, u {
     color: red;
   }
