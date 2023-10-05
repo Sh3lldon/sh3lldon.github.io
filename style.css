@@ -19,7 +19,8 @@ a, u {
     margin-top: 5%;
 }
 .general_info span{
-    color: white;
+    color: #00fa07;
+    font-size: 90%;
 }
 .shelldon{
     color: red;
@@ -31,8 +32,8 @@ a, u {
     margin-left: 3%;
 }
 .general_info{
-    color: #00fa07;
-    font-size: 150%;
+    color: white;
+    font-size: 140%;
     margin-left: 6%;
 }
 
