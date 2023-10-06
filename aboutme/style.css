@@ -1,0 +1,22 @@
+html{
+    height: 100%;
+    width: 100%;
+    background-color: #525252;
+    font-family: monospace;
+}
+.info{
+    color: greenyellow;
+    height: 30%;
+    width: 40%;
+    position: flex;
+    margin-top: 5%;
+    margin-left: 10%;
+    font-size: 150%;
+}
+.satoru{
+    margin-right: 4%;
+    margin-top: 8%;
+    position: flex;
+    float: right;
+    width: 45%;
+}

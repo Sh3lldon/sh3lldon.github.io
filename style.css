@@ -2,14 +2,18 @@ html{
     height: 100%;
     width: 100%;
     background-color: #191615;
+    font-family: monospace;
 }
 body{
     margin: 0;
     height: 100%;
 }
 a, u {
-    color: red;
-  }
+    color: #9933ff;
+}
+br{
+    margin-bottom: 5%;
+}
 .info{
     width: 80%;
     height: 80%;
@@ -58,4 +62,35 @@ a, u {
 .aboutmelink{
     margin-left: 6%;
     font-size: 150%;
+}
+.cheatsheet{
+    color: #0076fc;
+    font-size: 150%;
+    margin-left: 3%;
+}
+.lowlevelland{
+    color: white;
+    font-size: 150%;
+    margin-left: 6%;
+}
+.exp301 span{
+    color:#00fa07;
+}
+.exp301{
+    margin-left: 9%;
+    font-size: 140%;
+}
+.winkern span{
+    color:#00fa07;
+}
+.winkern{
+    margin-left: 9%;
+    font-size: 140%;
+}
+.winkernexp span{
+    color: #00fa07;
+}
+.winkernexp{
+    margin-left: 9%;
+    font-size: 140%;
 }
