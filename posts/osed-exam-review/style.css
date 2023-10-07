@@ -1,0 +1,54 @@
+html{
+    height: 100%;
+    width: 100%;
+    background-color: #191615;
+    font-family: monospace;
+}
+body{
+    margin: 0;
+    height: 100%;
+}
+a, u {
+    color: #9933ff;
+}
+.info{
+    width: 80%;
+    height: 80%;
+    position: flex;
+    float:left;
+    margin-left: 15%;
+    margin-top: 5%;
+    color: white;
+    font-size: 130%;
+}
+h1{
+    color: red;
+    font-size: 200%;
+}
+.osed{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 35%;
+}
+h3{
+    margin-left: 3%;
+    color: red;
+}
+.info span{
+    color: #00fa07;
+}
+.cert{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.linkcert{
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 130%;
+}

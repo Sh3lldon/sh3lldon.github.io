@@ -52,6 +52,9 @@ br{
     margin-left: 6%;
 }
 .post_message span{
+    color: #00fa07;
+}
+.post_message a{
     color: yellow;
 }
 .aboutme{
