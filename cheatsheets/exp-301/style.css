@@ -1,0 +1,66 @@
+html{
+    height: 100%;
+    width: 100%;
+    background-color: #191615;
+    font-family: monospace;
+}
+body{
+    margin: 0;
+    height: 100%;
+}
+a, u {
+    color: #9933ff;
+}
+P{
+    display: inline;
+}
+.chain{
+    font-size: 80%;
+}
+.br{
+    display: block;
+    margin-bottom: 0.1%;
+    margin-top: 0.8%;
+}
+.lis{
+    color:#00fa07;
+    font-size: 130%;
+}
+.info{
+    width: 80%;
+    height: 80%;
+    position: flex;
+    float: left;
+    margin-left: 15%;
+    margin-top: 5%;
+    color: white;
+    font-size: 130%;
+}
+h1{
+    color: red;
+    font-size: 200%;
+}
+.modules{
+    color: #00fa07;
+    margin-left: 3%;
+    font-size: 160%;
+}
+.links span{
+    color: #00fa07;
+}
+.links{
+    font-size: 120%;
+    margin-left: 6%;;
+}
+.sub{
+    color: #00fa07;
+    margin-left: 6%;
+    font-size: 140%;
+}
+.sublinks span{
+    color: #00fa07;
+}
+.sublinks{
+    font-size: 120%;
+    margin-left: 9%;;
+}

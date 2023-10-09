@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>The World of Windows PWN</title>
+        <link rel="stylesheet", href="style.css">
+        <link rel="icon" type="image/icon" href="../../images/aero-cover.ico">
+    </head>
+    <body>
+        <div class="info">
+            <h1>EXP-301 CHEATSHEET</h1>
+            <ol class="lis">
+                <a href="#prep">Prep</a><span class="chain">🔗</span>
+                <span class="br"></span>
+                <a href="#tools">Tools</a><span class="chain">🔗</span>
+                <span class="br"></span>
+                <a href="#scripts">Scripts</a><span class="chain">🔗</span>
+                <span class="br"></span>
+                <a href="#vanilla">Vanilla BOF</a><span class="chain">🔗</span>
+                <span class="br"></span>
+                <a href="#seh">SEH</a></li><span class="chain">🔗</span>
+                <span class="br"></span>
+                <a href="#egghunter">Egghunter</a><span class="chain">🔗</span>
+                <span class="br"></span>
+                <a href="#shellcoding">Shellcoding</a><span class="chain">🔗</span>
+                <span class="br"></span>
+                <a href="#dep">DEP</a><span class="chain">🔗</span>
+                <span class="br"></span>
+                <a href="#aslr">ASLR</a><span class="chain">🔗</span>
+            </ol>
+            <div class="modules" id="prep">
+                Prep
+            </div>
+            <div class="links">
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.offsec.com/documentation/EXP301-syllabus.pdf" target="_blank">EXP-301 syllabus</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/CyberSecurityUP/OSCE3-Complete-Guide#osed" target="_blank">EXP-301 some open-free materials</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.corelan.be/index.php/articles/" target="_blank">Corelan free exploit development articles</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/x86-architecture" target="_blank">x86 Architecture</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.udemy.com/course/x86-assembly-programming-from-ground-uptm/" target="_blank">x86 Assembly course</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://youtube.com/playlist?list=PLMB3ddm5Yvh3gf_iev78YP5EPzkA3nPdL" target="_blank">Intro to Reversing (Beginners)</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="http://ricardonarvaja.info/WEB/EXPLOITING%20Y%20REVERSING%20USANDO%20HERRAMIENTAS%20FREE/INGLES/" target="_blank">Reversing training by Ricardo Narvaja</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/" target="_blank">Exploit-DB</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/stephenbradshaw/vulnserver" target="_blank">Vulnserver (github)</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://fluidattacks.com/blog/tags/vulnserver/" target="_blank">Vulnserver (blog)</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://tryhackme.com/room/bufferoverflowprep" target="_blank">Tryhackme BOF Prep room</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://tryhackme.com/room/brainstorm" target="_blank">Tryhackme Brainstorm room</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://tryhackme.com/room/brainpan" target="_blank">Tryhackme Brainpan 1 room</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://tryhackme.com/room/gatekeeper" target="_blank">Tryhackme Gatekeeper room</a>
+            </div>
+            <br>
+            <br>
+            <div class="modules" id="tools">
+                Tools
+            </div>
+            <div class="links">
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://developer.microsoft.com/zh-tw/windows/downloads/windows-sdk/" target="_blank">WinDdb</a>
+                <p>: debugger</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://blog.lamarranet.com/wp-content/uploads/2021/09/WinDbg-Cheat-Sheet.pdf" target="_blank">WinDdb cheatsheet (user mode only)</a>
+                <p>: good info</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/lololosys/windbg-theme" target="_blank">WinDdb themes</a>
+                <p>: dark and white themes</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/Sh3lldon/EXP-301-cheat-sheets" target="_blank">Pykd</a>
+                <p>: allowing to deploy Python scripts</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/corelan/mona" target="_blank">Mona.py</a>
+                <p>: multiple task solution tool</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://code.google.com/archive/p/narly/" target="_blank">Narly</a>
+                <p>: displaying protection of each module</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://hex-rays.com/" target="_blank">IDA</a>
+                <p>: disassembler</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/0vercl0k/rp" target="_blank">rp++</a>
+                <p>: displaying gadgets for ROP chain</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/sashs/Ropper" target="_blank">Ropper</a>
+                <p>: displaying gadgets for ROP chain</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://learn.microsoft.com/en-us/sysinternals/downloads/tcpview" target="_blank">TCPView</a>
+                <p>: shows TCP and UDP endpoints</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/nop-tech/code_caver" target="_blank">code_caver</a>
+                <p>: python script that finds code caves for your exploit</p>
+            </div>
+            <br>
+            <br>
+            <div class="modules" id="scripts">
+                Scripts
+            </div>    
+            <div class="links">
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/epi052/osed-scripts" target="_blank">Scripts from epi052</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/sebastian93921/OSED-Code-Snippets" target="_blank">Scripts from sebastian93921</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/bugzzzhunter/OSEDscripts" target="_blank">Scripts from bugzzzhunter</a>
+            </div>
+            <br>
+            <br>
+            <div class="modules" id="vanilla">
+                Vanilla Buffer Overflow
+            </div>
+            <br>
+            <div class="sub">
+                Writeups
+            </div>
+            <div class="sublinks">
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/" target="_blank">Stack BOF part 1</a>
+                <p>by corelan</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.corelan.be/index.php/2009/07/23/writing-buffer-overflow-exploits-a-quick-and-basic-tutorial-part-2/" target="_blank">Stack BOF part 2</a>
+                <p>by corelan</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://fluidattacks.com/blog/vulnserver-trun/" target="_blank">Vulnserver TRUN</a>
+                <p>by fluidattacks</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://infosecwriteups.com/tryhackme-oscp-buffer-overflow-prep-overflow-1-19e000482f27" target="_blank">BOF prep Tryhackme</a>
+                <p>by infosecwriteups</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://steflan-security.com/tryhackme-brainstorm-walkthrough/" target="_blank">Brainstorm</a>
+                <p>by steflan-security</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://dorian5.medium.com/tryhackme-com-brainpan-1-walkthrough-3c9648a18c31" target="_blank">Brainpan 1</a>
+                <p>by medium</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://steflan-security.com/tryhackme-gatekeeper-walkthrough/" target="_blank">Gatekeeper</a>
+                <p>by steflan-security</p>
+            </div>
+            <br>
+            <div class="sub">
+                Binaries
+            </div>
+            <div class="sublinks">
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://tryhackme.com/room/bufferoverflowprep" target="_blank">Tryhackme BOF Prep room</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://tryhackme.com/room/brainstorm" target="_blank">Tryhackme Brainstorm room</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://tryhackme.com/room/brainpan" target="_blank">Tryhackme Brainpan 1 room</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://tryhackme.com/room/gatekeeper" target="_blank">Tryhackme Gatekeeper room</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/stephenbradshaw/vulnserver" target="_blank">Vulnserver (github)</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/0ffe5385147edd1f9e7b460c6d7cb0a6-minishare-1.4.1.zip" target="_blank">MiniShare 1.4.1</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/9fceb6fefd0f3ca1a8c36e97b6cc925d-PCMan.7z" target="_blank">PCMan FTP server 2.0.7</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/687ef6f72dcbbf5b2506e80a375377fa-freefloatftpserver.zip" target="_blank">Freefloat FTP server 1.0</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/39adeb7fa4711cd1cac8702fb163ded5-vuplayersetup.exe" target="_blank">VUPlayer 2.49</a>
+            </div>
+            <br>
+            <br>
+            <div class="modules" id="seh">
+                SEH
+            </div>
+            <br>
+            <div class="sub">
+                Writeups
+            </div>
+            <div class="sublinks">
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://shelldonsblog.wixsite.com/blog/post/seh-buffer-overflow" target="_blank">SEH Buffer Overflow</a>
+                <p>by Shelldon</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.corelan.be/index.php/2009/07/25/writing-buffer-overflow-exploits-a-quick-and-basic-tutorial-part-3-seh/" target="_blank">SEH Based Exploits</a>
+                <p>by corelan</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.corelan.be/index.php/2009/07/28/seh-based-exploit-writing-tutorial-continued-just-another-example-part-3b/" target="_blank">SEH Based Exploits</a>
+                <p>by corelan (another example)</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="http://www.securitysift.com/windows-exploit-development-part-6-seh-exploits/" target="_blank">SEH Exploitation</a>
+                <p>by Securitysift</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="http://www.fuzzysecurity.com/tutorials/expDev/3.html" target="_blank">SEH Exploitation</a>
+                <p>by Fuzzysecurity</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.shogunlab.com/blog/2017/11/06/zdzg-windows-exploit-4.html" target="_blank">SEH Exploitation</a>
+                <p>by Shogun Lab</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://youtu.be/wwyoh2kEO9I" target="_blank">Kevin PG practice</a>
+                <p>by xct</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://youtu.be/sLXhzxiLZ4U" target="_blank">UT99 PG practice</a>
+                <p>by xct (another example)</p>
+            </div>
+            <br>
+            <div class="sub">
+                Binaries
+            </div>
+            <div class="sublinks">
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/3c35dc3d6067fcc50f118500eb116c0b-millennium1.exe" target="_blank">Millenium MP3 Studio 2.0</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/64215b82be8bb2e749f95fec5b51d3e4-FMCRSetup-2.6.exe" target="_blank">Free MP3 CD Ripper 2.6</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/5ad3e3560df85ecf6622fe3c58fb0c35-easy_avi_converter.exe" target="_blank">Easy AVI DivX Converter 1.2.2.4</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/0c966e74828582db6029aee6dc59bbd5-my_video_converter.exe" target="_blank">My Video Converter 1.5.24</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/3ef2cd6c64e6d94c90c907311fb49710-img2pdf.exe" target="_blank">VeryPDF Image2PDF Converter</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/b31a84e79d9941d89336b6708ef52a20-ASXtoMP3Converter_3121.exe" target="_blank">ASX to MP3 Converter 3.1.2.1</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/stephenbradshaw/vulnserver" target="_blank">Vulnserver (GMON)</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/c682138ebbea9af7948a3f142bbd054b-ecssetup.exe" target="_blank">EFS Easy Chat Server 3.1</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/60f3ff1f3cd34dec80fba130ea481f31-efssetup.exe" target="_blank">Easy File Sharing Web Server 7.2</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/f7915612721b0e8dad57bdfcb29ac9bb-freeFTPd.exe" target="_blank">freeFTPD 1.0.10</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/2bc586294ef5b2e4c9972152ff3bd696-fttsetup1.8.exe" target="_blank">FathFTP 1.8</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/da3a3626f99a85f9ab59ab77f083ff80-fs-wizard-setup.exe" target="_blank">File Sharing Wizard 1.5.0</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/69f77623bb32589fb5343f598b61bbd9-eabws.exe" target="_blank">Easy Address Book Web server 1.6</a>
+            </div>
+            <br>
+            <br>
+            <div class="modules" id="egghunter">
+                Egghunter
+            </div>
+            <br>
+            <div class="sub">
+                Writeups
+            </div>
+            <div class="sublinks">
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.corelan.be/index.php/2010/01/09/exploit-writing-tutorial-part-8-win32-egg-hunting/" target="_blank">Win32 Egg hunting</a>
+                <p>by corelan</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.corelan.be/index.php/2011/11/18/wow64-egghunter/" target="_blank">WoW64 Egghunter</a>
+                <p>by corelan</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="http://www.hick.org/code/skape/papers/egghunt-shellcode.pdf" target="_blank">Egghunter Exploitation</a>
+                <p>by Skape</p>
+
+                <span class="br"></span>
+                <span>•</span>
+                <a href="http://www.securitysift.com/windows-exploit-development-part-5-locating-shellcode-egghunting/" target="_blank">Locating Shellcode with egghunting</a>
+                <p>by Securitysift</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="http://www.fuzzysecurity.com/tutorials/expDev/4.html" target="_blank">Egghunters</a>
+                <p>by Fuzzysecurity</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.shogunlab.com/blog/2017/09/02/zdzg-windows-exploit-3.html" target="_blank">Egghunter</a>
+                <p>by shogunlab</p>
+            </div>
+            <br>
+            <div class="sub">
+                Binaries
+            </div>
+            <div class="sublinks">
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/560e231d212fdaef8e52471f94a5f014-docprint_pro_setup.exe" target="_blank">docPrint Pro 8.0</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/c45f09020652e1111f83c8c8bce35427-FoxitReader411_enu_Setup.exe" target="_blank">Foxit Reder 4.1.1</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/d59f24b86431eeb25281bce7817783f1-audacity-win-1.2.6.exe" target="_blank">Audacity 1.2</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/90a8c5b447f3867d1d22cb599ed17b59-minishare-1.5.5.zip" target="_blank">MiniShare 1.5.5</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.itusoft.com/download/FMCRSetup.exe" target="_blank">Free Mp3 CD Ripper 2.8</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/743169f20b96c32da77e5ff7129e54db-b64dec-1-1-2.zip" target="_blank">Base64 Decoder 1.1.2</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/ab56d0b1672747878d5325afa9c46c74-KiTTYPortable_0.65.0.2_English.paf.exe" target="_blank">KiTTY Portable 0.65.0.2p</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/4a83348f18a18ba34f9747648b550307-ip-tools.exe" target="_blank">IP-Tools 2.5</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/stephenbradshaw/vulnserver" target="_blank">Vulnserver (GTER, GMON, KSTET)</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/60f3ff1f3cd34dec80fba130ea481f31-efssetup.exe" target="_blank">Easy File Sharing Web Server 7.2</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/f07b073307052ccfb02fe1af243bb229-tftpserverspV1.4.tar.gz" target="_blank">TFTP Server 1.4</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/2b0e04c048c9b84b12f742ae38136de6-minalic.zip" target="_blank">MinaliC WebServer 2.0.0</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/7b5ab39544fb296c05c6ea19ca5a3bad-sysaxserv_setup5.52.msi" target="_blank">Sysax Multi Server 5.52</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/08e770b173aa41be27db2304ac0df846-Savant31.exe" target="_blank">Savant Web Server 3.1</a>
+            </div>
+            <br>
+            <br>
+            <div class="modules" id="shellcoding">
+                Shellcoding
+            </div>
+            <br>
+            <div class="sub">
+                Writeups
+            </div>
+            <div class="sublinks">
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.corelan.be/index.php/2010/02/25/exploit-writing-tutorial-part-9-introduction-to-win32-shellcoding/" target="_blank">Intro to win32 shellcoding</a>
+                <p>by corelan</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="http://www.hick.org/code/skape/papers/win32-shellcode.pdf" target="_blank">Understanding Win shellcode</a>
+                <p>by skape</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://research.nccgroup.com/wp-content/uploads/2020/07/writing_small_shellcode.pdf" target="_blank">Writing small shellcode</a>
+                <p>by Dafydd Stuttard</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.ired.team/offensive-security/code-injection-process-injection/writing-custom-shellcode-encoders-and-decoders" target="_blank">Writig shellcode encoders and decoders</a>
+                <p>by ired.team</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.fuzzysecurity.com/tutorials/expDev/6.html" target="_blank">Writing W32 shellcode</a>
+                <p>by FuzzySecurity</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://marcosvalle.github.io/re/exploit/2019/01/19/messagebox-shellcode.html" target="_blank">Writing Messagebox shellcode</a>
+                <p>by marcosvalle</p>
+                <span class="br"></span>
+                <span>•</span>
+                Writing Win x32 manual shellcode
+                <a href="https://marcosvalle.github.io/re/exploit/2018/10/20/windows-manual-shellcode-part1.html" target="_blank">part 1</a>
+                <span>&&</span>
+                <a href="https://marcosvalle.github.io/re/exploit/2018/10/21/windows-manual-shellcode-part2.html" target="_blank">part 2</a>
+                <span>&&</span>
+                <a href="https://marcosvalle.github.io/re/exploit/2018/10/21/windows-manual-shellcode-part3.html" target="_blank">part 3</a>
+                <p>by marcosvalle</p>
+            </div>
+            <br>
+            <div class="sub">
+                Socker reuse technique
+            </div>
+            <div class="sublinks">
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://connormcgarr.github.io/WS32_recv()-Reuse/" target="_blank">WS32_recv() resuse</a>
+                <p>by Connor McGarr</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://zflemingg1.gitbook.io/undergrad-tutorials/walkthroughs-osce/vulnserver-gter-command" target="_blank">Vulnserver - GTER</a>
+                <p>by Zachary Fleming</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://shelldonsblog.wixsite.com/blog/post/stack-buffer-overflow-socket-reuse" target="_blank">Socket Reuse</a>
+                <p>by Shelldon</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://guidedhacking.com/threads/binary-exploit-development-3-writing-an-exploit-stager.20067/" target="_blank">Writing a stager</a>
+                <p>by nop</p>
+            </div>
+            <br>
+            <br>
+            <div class="modules" id="dep">DEP</div>
+            <br>
+            <div class="sub">
+                Writeups
+            </div>
+            <div class="sublinks">
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://fluidattacks.com/blog/understanding-dep/" target="_blank">Understanding DEP</a>
+                <p>by fluidattacks</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://fluidattacks.com/blog/bypassing-dep/" target="_blank">Bypassing DEP with ROP</a>
+                <p>by fluidattacks</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://shelldonsblog.wixsite.com/blog/post/bypassing-dep-with-virtualalloc-pushad-method" target="_blank">Bypassing DEP with VirtualAlloc</a>
+                <p>(PUSHAD method) by Shelldon</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://shelldonsblog.wixsite.com/blog/post/bypassing-dep-with-custom-rop-chain-virtualprotect" target="_blank">Bypassing DEP with VirtualProtect</a>
+                <p>by Shelldon</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://guidedhacking.com/threads/exploit-development-5-dep-bypass-with-writeprocessmemory.20164/" target="_blank">Bypassing DEP with WriteProcessMemory</a>
+                <p>by nop</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://guidedhacking.com/threads/binary-exploit-development-6-writing-a-rop-decoder.20184/" target="_blank">Write a ROP decoder</a>
+                <p>by nop</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.corelan.be/index.php/2010/06/16/exploit-writing-tutorial-part-10-chaining-dep-with-rop-the-rubikstm-cube/" target="_blank">Changing DEP with ROP</a>
+                <p>by corelan</p>
+            </div>
+            <br>
+            <div class="sub">
+                Binaries
+            </div>
+            <div class="sublinks">
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/Sh3lldon/RemoteApp" target="_blank">RemoteApp</a>
+                <p>by Shelldon</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/bmdyy/quote_db" target="_blank">QuoteDB</a>
+                <p>by bmdyy</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/bmdyy/signatus" target="_blank">Signatus</a>
+                <p>by bmdyy</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/xct/vulnbins" target="_blank">Rainbow 1 and 2</a>
+                <p>by xct</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/60f3ff1f3cd34dec80fba130ea481f31-efssetup.exe" target="_blank">Easy File Sharing Web Server 7.2</a>
+                <p>by xct</p>
+                <span class="br"></span>
+                <span>•</span>
+                <p>And other binaries (You need to turn on Data Execution Prevention in your VM)</p>
+            </div>
+            <br>
+            <br>
+            <div class="modules" id="aslr">
+                ASLR
+            </div>
+            <br>
+            <div class="sub">
+                Writeups
+            </div>
+            <div class="sublinks">
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.corelan.be/index.php/2009/09/21/exploit-writing-tutorial-part-6-bypassing-stack-cookies-safeseh-hw-dep-and-aslr/" target="_blank">Bypassing stack cookies, SafeSEH, SEHOP, HW, DEP and ASLR</a>
+                <p>by corelan</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.corelan.be/index.php/2011/07/03/universal-depaslr-bypass-with-msvcr71-dll-and-mona-py/" target="_blank">Universal DEP/ASLR bypassing with msvcr71.dll and mona.py</a>
+                <p>by corelan</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/docs/english/17914-bypassing-aslrdep.pdf" target="_blank">Bypassing ASLR/DEP</a>
+                <p>by Vinay Katoch</p>
+            </div>
+            <br>
+            <div class="sub">
+                Binaries
+            </div>
+            <div class="sublinks">
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/Sh3lldon/RemoteApp" target="_blank">RemoteApp</a>
+                <p>by Shelldon</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/bmdyy/quote_db" target="_blank">QuoteDB</a>
+                <p>by bmdyy</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/bmdyy/signatus" target="_blank">Signatus</a>
+                <p>by bmdyy</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://github.com/xct/vulnbins" target="_blank">Rainbow 1 and 2</a>
+                <p>by xct</p>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/e9d68d1ad9873339d6ef0fd5a2e1f0bd-CoolPlayerPlusPortable_2.19.6.paf.exe" target="_blank">CoolPlayer+ Portable 2.19.6</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/f23274df165e69006a1fca2e06aeae29-CoolPlayerPlusPortable_2.19.2.paf.exe" target="_blank">CoolPlayer+ Portable 2.19.12</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/1c3c56049cc1d722825c5d7635b51029-BlazeDVD_50_Professional_TRIAL.exe" target="_blank">BlazeDVD 6.1</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/1c3c56049cc1d722825c5d7635b51029-BlazeDVD_50_Professional_TRIAL.exe" target="_blank">BlazeDVD 5.1</a>
+                <span class="br"></span>
+                <span>•</span>
+                <a href="https://www.exploit-db.com/apps/142ba80cfca8f99ac36c92535728844c-sws-2.2-rc2-i686.exe" target="_blank">Simple Web Server 2.2-rc2</a>
+            </div>
+        </div>
+    </body>
+</html>
