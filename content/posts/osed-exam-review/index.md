@@ -1,7 +1,7 @@
 +++
 title = 'Osed Exam Review'
 date = 2023-09-02T12:43:15+05:00
-draft = true
+draft = false
 +++
 
 ### In this blog post I'll talk aboutt OSED exam. Hope this post will help you!

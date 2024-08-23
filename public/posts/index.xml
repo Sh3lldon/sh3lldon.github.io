@@ -25,7 +25,7 @@
       <link>http://localhost:1313/posts/osed-exam-review/</link>
       <pubDate>Sat, 02 Sep 2023 12:43:15 +0500</pubDate>
       <guid>http://localhost:1313/posts/osed-exam-review/</guid>
-      <description>In this blog post I&amp;rsquo;ll talk aboutt OSED exam. Hope this post will help you! </description>
+      <description>In this blog post I&amp;rsquo;ll talk aboutt OSED exam. Hope this post will help you! 1. EXP-301 aka WUMED course This course is awesome course. Yeah it is intermediate Windows User Mode Exploit Development course, but there are a lot of good stuff, which will be great fundamentall for Advanced Exploitation. I really enjoyed in Custom Shellcode, DEP, ASLR modules. Also, In this course you will use WinDBG, which is great debugger for user mode and kernel mode.</description>
     </item>
   </channel>
 </rss>
