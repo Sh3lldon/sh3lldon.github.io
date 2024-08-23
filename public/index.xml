@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>ExampleSite</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
     <generator>Hugo -- 0.128.2</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Fri, 23 Aug 2024 12:03:14 +0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -14,6 +19,13 @@
       <pubDate>Fri, 23 Aug 2024 12:03:14 +0500</pubDate>
       <guid>http://localhost:1313/posts/va-bypass-dep/</guid>
       <description>Hello World! This is my new website</description>
+    </item>
+    <item>
+      <title>Osed Exam Review</title>
+      <link>http://localhost:1313/posts/osed-exam-review/</link>
+      <pubDate>Sat, 02 Sep 2023 12:43:15 +0500</pubDate>
+      <guid>http://localhost:1313/posts/osed-exam-review/</guid>
+      <description>In this blog post I&amp;rsquo;ll talk aboutt OSED exam. Hope this post will help you! </description>
     </item>
   </channel>
 </rss>
