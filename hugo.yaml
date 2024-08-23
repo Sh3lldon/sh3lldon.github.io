@@ -1,5 +1,5 @@
 baseURL: "https://sh3lldon.github.io/"
-title: ExampleSite
+title: Shelldon's blog
 paginate: 5
 theme: PaperMod
 
@@ -14,10 +14,10 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
+  title: Shelldon's blog
+  description: "Shelldon's blog description"
   keywords: [Blog, Portfolio, PaperMod]
-  author: Me
+  author: Shelldon
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
@@ -71,8 +71,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog. I am OSED & OSEP certified
+    Title: "C:\\Users\\Shelldon> whoami /all"
+    Content: "Windows User & Kernel Mode Exploit Developer, Red Teamer, Security Researcher"
 
   socialIcons:
     - name: x
@@ -130,3 +130,8 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+

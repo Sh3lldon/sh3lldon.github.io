@@ -1,7 +1,9 @@
 +++
-title = 'Osed Exam Review'
+title = 'OSED Exam Review'
 date = 2023-09-02T12:43:15+05:00
 draft = false
+tags = ["OSED", "OffSec"]
+categories = ["Binary Exploitation", "Windows Exploitation"]
 +++
 
 ### In this blog post I'll talk aboutt OSED exam. Hope this post will help you!

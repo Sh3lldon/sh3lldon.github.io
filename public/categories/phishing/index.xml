@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Phishing on Shelldon&#39;s blog</title>
+    <link>http://localhost:1313/categories/phishing/</link>
+    <description>Recent content in Phishing on Shelldon&#39;s blog</description>
+    <image>
+      <title>Shelldon&#39;s blog</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 23 Aug 2024 18:44:32 +0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/phishing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dropper Using VBA</title>
+      <link>http://localhost:1313/posts/dropper-using-vba/</link>
+      <pubDate>Fri, 23 Aug 2024 18:44:32 +0500</pubDate>
+      <guid>http://localhost:1313/posts/dropper-using-vba/</guid>
+      <description>In this post we will talk about how to create a dropper using VBA and some detection stuff.
+First off, what is VBA and why it is useful.
+Well VBA stands for Visual Basic for Applications. This language very useful for creation some macros for the Microsoft Office tools. It has very interesting syntax and datatypes.
+To start coding in VBA we need to create a document, which can support macros.</description>
+    </item>
+  </channel>
+</rss>
