@@ -32,19 +32,25 @@
     <loc>http://localhost:1313/tags/vba/</loc>
     <lastmod>2024-08-23T18:44:32+05:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/categories/cheatsheet/</loc>
+    <lastmod>2024-08-23T18:01:41+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/exp-301/</loc>
+    <lastmod>2024-08-23T18:01:41+05:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/exp-301-cheetsheet/</loc>
+    <lastmod>2024-08-23T18:01:41+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/offsec/</loc>
+    <lastmod>2024-08-23T18:01:41+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/osed/</loc>
     <lastmod>2024-08-23T18:01:41+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/va-bypass-dep/</loc>
     <lastmod>2024-08-23T12:03:14+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/binary-exploitation/</loc>
-    <lastmod>2023-09-02T12:43:15+05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/offsec/</loc>
-    <lastmod>2023-09-02T12:43:15+05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/osed/</loc>
     <lastmod>2023-09-02T12:43:15+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/osed-exam-review/</loc>

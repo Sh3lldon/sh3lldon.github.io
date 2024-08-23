@@ -2,7 +2,7 @@
 title = 'OSED Exam Review'
 date = 2023-09-02T12:43:15+05:00
 draft = false
-tags = ["OSED", "OffSec"]
+tags = ["OSED", "OffSec", "EXP-301"]
 categories = ["Binary Exploitation", "Windows Exploitation"]
 +++
 

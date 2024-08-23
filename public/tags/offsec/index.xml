@@ -11,8 +11,24 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 02 Sep 2023 12:43:15 +0500</lastBuildDate>
+    <lastBuildDate>Fri, 23 Aug 2024 18:01:41 +0500</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/offsec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EXP-301 Cheetsheet</title>
+      <link>http://localhost:1313/posts/exp-301-cheetsheet/</link>
+      <pubDate>Fri, 23 Aug 2024 18:01:41 +0500</pubDate>
+      <guid>http://localhost:1313/posts/exp-301-cheetsheet/</guid>
+      <description>Links Prep🔗
+Tools🔗
+Scripts🔗
+Vanilla buffer overflow🔗
+SEH🔗
+Egghunter🔗
+Shellcoding🔗
+DEP🔗
+ASLR🔗
+Prep EXP-301 syllabus EXP-301 some open-free materials Corelan free exploit development articles x86 Architecture x86 Assembly course Intro to Reversing (Beginners) Reversing training by Ricardo Narvaja Exploit-DB Vulnserver (github) Vulnserver (blog) Tryhackme BOF Prep room Tryhackme Brainstorm room Tryhackme Brainpan 1 room Tryhackme Gatekeeper room Tools WinDdb : debugger WinDdb cheatsheet : windbg user mode cheat sheet WinDdb themes : dark and white themes Pykd : allowing to deploy Python scripts Mona.</description>
+    </item>
     <item>
       <title>OSED Exam Review</title>
       <link>http://localhost:1313/posts/osed-exam-review/</link>

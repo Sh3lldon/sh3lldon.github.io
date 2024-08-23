@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>OSED on Shelldon&#39;s blog</title>
-    <link>http://localhost:1313/tags/osed/</link>
-    <description>Recent content in OSED on Shelldon&#39;s blog</description>
+    <title>Cheatsheet on Shelldon&#39;s blog</title>
+    <link>http://localhost:1313/categories/cheatsheet/</link>
+    <description>Recent content in Cheatsheet on Shelldon&#39;s blog</description>
     <image>
       <title>Shelldon&#39;s blog</title>
       <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
@@ -12,7 +12,7 @@
     <generator>Hugo -- 0.128.2</generator>
     <language>en</language>
     <lastBuildDate>Fri, 23 Aug 2024 18:01:41 +0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/osed/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/cheatsheet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>EXP-301 Cheetsheet</title>
       <link>http://localhost:1313/posts/exp-301-cheetsheet/</link>
@@ -28,13 +28,6 @@ Shellcoding🔗
 DEP🔗
 ASLR🔗
 Prep EXP-301 syllabus EXP-301 some open-free materials Corelan free exploit development articles x86 Architecture x86 Assembly course Intro to Reversing (Beginners) Reversing training by Ricardo Narvaja Exploit-DB Vulnserver (github) Vulnserver (blog) Tryhackme BOF Prep room Tryhackme Brainstorm room Tryhackme Brainpan 1 room Tryhackme Gatekeeper room Tools WinDdb : debugger WinDdb cheatsheet : windbg user mode cheat sheet WinDdb themes : dark and white themes Pykd : allowing to deploy Python scripts Mona.</description>
-    </item>
-    <item>
-      <title>OSED Exam Review</title>
-      <link>http://localhost:1313/posts/osed-exam-review/</link>
-      <pubDate>Sat, 02 Sep 2023 12:43:15 +0500</pubDate>
-      <guid>http://localhost:1313/posts/osed-exam-review/</guid>
-      <description>In this blog post I&amp;rsquo;ll talk aboutt OSED exam. Hope this post will help you! 1. EXP-301 aka WUMED course This course is awesome course. Yeah it is intermediate Windows User Mode Exploit Development course, but there are a lot of good stuff, which will be great fundamentall for Advanced Exploitation. I really enjoyed in Custom Shellcode, DEP, ASLR modules. Also, In this course you will use WinDBG, which is great debugger for user mode and kernel mode.</description>
     </item>
   </channel>
 </rss>
