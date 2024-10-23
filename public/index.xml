@@ -23,7 +23,7 @@ SMB enum🔗
 Users list dump🔗
 Diving to pre created computer account🔗
 ADCS🔗
-Exploitation of ESC1🔗\
+Exploitation of ESC1🔗
 Welcome to the 1st part of Red Team series!
 In these series I will write some interesting details/attacks which will help in Red Team projects.
 In this post we will learn ADCS attack (ESC1) and pre-created computer accounts. Also little bit about kerberos and TGT ticket.

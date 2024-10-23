@@ -12,7 +12,7 @@ categories = ["Red Team"]
 [Users list dump](#users-list-dump)🔗\
 [Diving to pre created computer account](#diving-to-pre-created-computer-account)🔗\
 [ADCS](#adcs)🔗\
-[Exploitation of ESC1](#exploitation-of-esc1)🔗\
+[Exploitation of ESC1](#exploitation-of-esc1)🔗
 
 \
 Welcome to the 1st part of Red Team series!\
@@ -228,8 +228,9 @@ certipy find -u trainee@retro.vl -p trainee -target dc.retro.vl -enabled -stdout
 
 
 \
-And we found a vulnerable template and only **Domain Computers** can enroll it. So it is **ESC1**. After reading about **ESC1** from certipy's [github page](https://github.com/ly4k/Certipy?tab=readme-ov-file#esc1) I understand that we can request a certificate using **-ca (Certificate Authority)**, **-template (Template name)** and **-upn (Alternative UPN)** (for me upn sounds like impersonation).\
+And we found a vulnerable template and only **Domain Computers** can enroll it. So it is **ESC1**. After reading about **ESC1** from certipy's [github page](https://github.com/ly4k/Certipy?tab=readme-ov-file#esc1) I understand that we can request a certificate using **-ca (Certificate Authority)**, **-template (Template name)** and **-upn (Alternative UPN)** (for me upn sounds like impersonation).
 
+\
 Note that we can not just create a computer account and perform ESC1. The reason why is MachineAccountQuota is 0 which mean we can not create/add a computer account to the domain.
 
 ![](image-18.png)
