@@ -2,8 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/adcs/</loc>
+    <lastmod>2024-10-23T11:47:18-04:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2024-08-23T18:44:32+05:00</lastmod>
+    <lastmod>2024-10-23T11:47:18-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-10-23T11:47:18-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/red-team/</loc>
+    <lastmod>2024-10-23T11:47:18-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/retro/</loc>
+    <lastmod>2024-10-23T11:47:18-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-10-23T11:47:18-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-10-23T11:47:18-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/dropper-using-vba/</loc>
     <lastmod>2024-08-23T18:44:32+05:00</lastmod>
@@ -14,19 +32,7 @@
     <loc>http://localhost:1313/categories/phishing/</loc>
     <lastmod>2024-08-23T18:44:32+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-08-23T18:44:32+05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/red-team/</loc>
-    <lastmod>2024-08-23T18:44:32+05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-08-23T18:44:32+05:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/social-engineering/</loc>
-    <lastmod>2024-08-23T18:44:32+05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-08-23T18:44:32+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/vba/</loc>

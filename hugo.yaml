@@ -15,7 +15,7 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Shelldon's blog
-  description: "Shelldon's blog description"
+  description: "Road to APT"
   keywords: [Blog, Portfolio, PaperMod]
   author: Shelldon
   # author: ["Me", "You"] # multiple authors

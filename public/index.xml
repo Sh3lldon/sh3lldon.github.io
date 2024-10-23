@@ -9,10 +9,26 @@
       <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.131.0</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Aug 2024 18:44:32 +0500</lastBuildDate>
+    <lastBuildDate>Wed, 23 Oct 2024 11:47:18 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Retro Vulnlab</title>
+      <link>http://localhost:1313/posts/retro/</link>
+      <pubDate>Wed, 23 Oct 2024 11:47:18 -0400</pubDate>
+      <guid>http://localhost:1313/posts/retro/</guid>
+      <description>TLDR Nmap🔗
+SMB enum🔗
+Users list dump🔗
+Diving to pre created computer account🔗
+ADCS🔗
+Exploitation of ESC1🔗\
+In this post we will learn ADCS attack (ESC1) and pre-created computer accounts.
+Nmap Using nmap we can scan the machine to understand which ports/services are open
+nmap -sC -sV -T4 -oN nmap.txt 10.10.81.246 After getting results we can see ports/services on the host
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-10-23 13:09 EDT Nmap scan report for 10.</description>
+    </item>
     <item>
       <title>Dropper Using VBA</title>
       <link>http://localhost:1313/posts/dropper-using-vba/</link>
